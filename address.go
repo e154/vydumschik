@@ -2,7 +2,6 @@ package vydumschik
 
 import (
 	"github.com/ghodss/yaml"
-	"io/ioutil"
 	"strconv"
 	"fmt"
 )
@@ -94,12 +93,7 @@ func (a *Address) getAddressFile() error {
 		return nil
 	}
 
-	file, err := ioutil.ReadFile("data/addresses.yml")
-	if err != nil {
-		return err
-	}
-
 	Addresses = new(addresses)
-	err = yaml.Unmarshal(file, &Addresses)
+	err := yaml.Unmarshal([]byte(dataAddresses), &Addresses)
 	return err
 }

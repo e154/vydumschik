@@ -1,3 +1,6 @@
+package vydumschik
+
+var dataAddresses = `
 ---
 streets:
 - type: :street
@@ -3015,3 +3018,5 @@ streets:
 - type: :avenue
   count: 40
   name: пр. Северный
+
+`

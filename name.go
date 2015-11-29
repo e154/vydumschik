@@ -2,7 +2,7 @@ package vydumschik
 
 import (
 	"github.com/ghodss/yaml"
-	"io/ioutil"
+//	"io/ioutil"
 	"fmt"
 )
 
@@ -108,12 +108,7 @@ func (n *Name) getNameFile() error {
 		return nil
 	}
 
-	file, err := ioutil.ReadFile("data/names.yml")
-	if err != nil {
-		return err
-	}
-
 	Names = new(names)
-	err = yaml.Unmarshal(file, &Names)
+	err := yaml.Unmarshal([]byte(dataNames), &Names)
 	return err
 }

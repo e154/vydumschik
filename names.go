@@ -1,3 +1,6 @@
+package vydumschik
+
+var dataNames = `
 ---
 male:
 - male_middle: Абакумович
@@ -2862,3 +2865,4 @@ surnames:
 - Меркушев
 - Лыткин
 - Туров
+`
